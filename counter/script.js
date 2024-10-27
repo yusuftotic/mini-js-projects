@@ -4,15 +4,8 @@ const btnDecrease = document.getElementById('decrease')
 const btnReset = document.getElementById('reset')
 
 
+btnIncrease.addEventListener('click', () => counter.innerText = +counter.innerText + 1)
 
-btnIncrease.addEventListener('click', (e) => {
-  console.log('+')
-})
+btnDecrease.addEventListener('click', () => counter.innerText = counter.innerText > 0 ? +counter.innerText - 1 : 0)
 
-btnDecrease.addEventListener('click', (e) => {
-  console.log('-')
-})
-
-btnReset.addEventListener('click', (e) => {
-  console.log('reset')
-})
+btnReset.addEventListener('click', () => counter.innerText = 0)
